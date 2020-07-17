@@ -13,6 +13,7 @@ console.log(result);
 
 
 
+
 // Wood Calculator
 
 function woodCalculator(chair, table, bed){
@@ -22,22 +23,23 @@ function woodCalculator(chair, table, bed){
     var totalWood = woodForChair + woodForTable + woodForBed;
     return totalWood;
 }
-
 var totalWoodCount = woodCalculator();
 console.log(totalWoodCount);
+
 
 
 
 // Brick Calculator
 
 function brickCalculator(floorNumber){
+    var floorNumber;
+    floorNumber = parseInt(floorNumber);
     var firstTenFloor = 10;
     var secondTenFloor = 10;
     var firstTenFloorLength = 15;
     var secondTenFloorLength = 12;
     var moreThanTwentyLength = 10;
     var perLengthBricks = 1000;
-    var bricksNumber;
     if(floorNumber > 0 && floorNumber <= 10){
         bricksNumber = (floorNumber * firstTenFloorLength * perLengthBricks);    
     }
@@ -47,18 +49,18 @@ function brickCalculator(floorNumber){
     else if(floorNumber > 20){
         bricksNumber = (firstTenFloor * firstTenFloorLength * perLengthBricks) + (secondTenFloor * secondTenFloorLength * perLengthBricks) + ((floorNumber - 20) * moreThanTwentyLength * perLengthBricks);
     }
-    else {
+    else{
         bricksNumber = "Please enter a valid number";
     }
     return bricksNumber;
 }
-var totalBricks = brickCalculator(26);
+var totalBricks = brickCalculator();
 console.log(totalBricks);
 
 
 
-// Tiny Friend
 
+// Tiny Friend
 
 function tinyFriend(friendNames){
     var shortestName = friendNames[0];
