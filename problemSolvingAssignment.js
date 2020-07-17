@@ -1,14 +1,14 @@
 // Feet to Mile
 
 function feetToMile(feet){
+    var mile = feet / 5280;
+    mile = mile.toFixed(5);
     if(feet < 0){
         return "Distance cannot be Negative";
     }
-    var mile = feet / 5280;
-    mile = mile.toFixed(5);
     return mile;
 }
-var result = feetToMile(-543);
+var result = feetToMile();
 console.log(result);
 
 
