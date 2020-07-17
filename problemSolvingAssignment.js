@@ -33,22 +33,26 @@ console.log(totalWoodCount);
 function brickCalculator(floorNumber){
     var firstTenFloor = 10;
     var secondTenFloor = 10;
+    var firstTenFloorLength = 15;
+    var secondTenFloorLength = 12;
+    var moreThanTwentyLength = 10;
+    var perLengthBricks = 1000;
     var bricksNumber;
     if(floorNumber > 0 && floorNumber <= 10){
-        bricksNumber = (floorNumber * 15 * 1000);    
+        bricksNumber = (floorNumber * firstTenFloorLength * perLengthBricks);    
     }
     else if(floorNumber > 10 && floorNumber <= 20){
-        bricksNumber = (firstTenFloor * 15 * 1000) + (secondTenFloor * 12 * 1000);
+        bricksNumber = (firstTenFloor * firstTenFloorLength * perLengthBricks) + (secondTenFloor * secondTenFloorLength * perLengthBricks);
     }
     else if(floorNumber > 20){
-        bricksNumber = (firstTenFloor * 15 * 1000) + (secondTenFloor * 12 * 1000) + ((floorNumber - 20) * 10 * 1000);
+        bricksNumber = (firstTenFloor * firstTenFloorLength * perLengthBricks) + (secondTenFloor * secondTenFloorLength * perLengthBricks) + ((floorNumber - 20) * moreThanTwentyLength * perLengthBricks);
     }
     else {
         bricksNumber = "Please enter a valid number";
     }
     return bricksNumber;
 }
-var totalBricks = brickCalculator();
+var totalBricks = brickCalculator(26);
 console.log(totalBricks);
 
 
